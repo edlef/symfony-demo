@@ -15,11 +15,17 @@ Installation
 
 	sh bin/.install.sh
 
+4. Run server and go to http://localhost:8000/ or setup a VH
+
+    bin/console server:run
+
 Frontend
 -------------
-Front dependencies are managed by webpack
+
+ If you need to change javascript or css run
 
     npm run dev
+
 
 
 *Symfony Standard Edition
