@@ -26,7 +26,7 @@ Frontend
 
     npm run dev
 
-
+Configuration can be found under **webpack.config.js**
 
 *Symfony Standard Edition
 ========================

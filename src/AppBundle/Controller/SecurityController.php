@@ -11,7 +11,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends Controller
 {
     /**
-     * @Route("/login", name="login")
+     * @Route("/", name="login")
      */
     public function loginAction(Request $request, AuthenticationUtils $authUtils)
     {
