@@ -15,6 +15,11 @@ Installation
 
 	sh bin/.install.sh
 
+Frontend
+-------------
+Front dependencies are managed by webpack
+
+    npm run dev
 
 
 *Symfony Standard Edition
