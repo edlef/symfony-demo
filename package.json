@@ -6,7 +6,9 @@
   "directories": {
     "test": "tests"
   },
-  "dependencies": {},
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  },
   "devDependencies": {
     "@symfony/webpack-encore": "^0.17.1",
     "bootstrap-sass": "^3.3.7",
