@@ -1,7 +1,11 @@
+**A demo project based on Symfony 3.4**
+
 Installation
 ========================
 
-1. Clone or download
+1. Clone or download repository
+
+    https://github.com/edlef/symfony-demo.git
 
 2. Run composer
 
