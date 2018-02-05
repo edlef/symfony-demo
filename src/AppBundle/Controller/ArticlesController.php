@@ -24,4 +24,21 @@ class ArticlesController extends Controller
 
         return $this->render('@App/articles/list.html.twig', [ 'articles' => $articles ]);
     }
+
+    /**
+     * @Route("/admin/articles/{id}", name="article_detail", requirements={"id" = "\d+"})
+     * @param $id
+     * @return Response
+     */
+    public function detailAction($id)
+    {
+
+        $article = $this->getDoctrine()
+            ->getRepository(Article::class)
+            ->findOneById($id);
+
+        dump($article);
+
+        return $this->render('@App/articles/detail.html.twig', [ 'article' => $article ]);
+    }
 }

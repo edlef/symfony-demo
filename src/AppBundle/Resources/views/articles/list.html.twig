@@ -38,9 +38,9 @@
                                     <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
                                     <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
                                 </td>
-                                <td>{{ article.title }}</td>
-                                <td>{{ article.releaseDate|date }}</td>
-                                <td>{{ article.price }}</td>
+                                <td><a href="{{ path('article_detail', { 'id' : article.id }) }}" target="_blank">{{ article.title }}</a></td>
+                                <td>{{ article.releaseDate|date("d/m/Y") }}</td>
+                                <td>{{ article.price }} €</td>
                                 <td>{{ article.type.code }}</td>
                                 <td>{{ article.author.firstname ~ ' ' ~ article.author.lastname }}</td>
                             </tr>
