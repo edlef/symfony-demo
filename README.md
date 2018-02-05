@@ -1,4 +1,14 @@
-Symfony Standard Edition
+Installation
+
+1. Clone or download
+2. Run composer 
+	composer install
+3. Run installation script
+	sh bin/.install.sh
+
+
+
+*Symfony Standard Edition
 ========================
 
 **WARNING**: This distribution does not support Symfony 4. See the

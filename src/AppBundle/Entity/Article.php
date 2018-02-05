@@ -92,7 +92,7 @@ class Article
 
     /**
      * @ORM\ManyToOne(targetEntity="ArticleType", inversedBy="articles")
-     * @ORM\JoinColumn(name="article_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="type_id", referencedColumnName="id")
      */
     private $type;
 
