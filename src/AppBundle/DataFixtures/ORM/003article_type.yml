@@ -1,0 +1,6 @@
+AppBundle\Entity\ArticleType:
+    ArticleType_1:
+        code: 'book'
+    ArticleType_2:
+        code: 'film'
+

@@ -1,0 +1,17 @@
+AppBundle\Entity\Actor:
+    Actor_1:
+        firstname: 'Leonardo'
+        lastname: 'Dicaprio'
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+    Actor_2:
+        firstname: 'Jean'
+        lastname: 'Dujardin'
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+    Actor_3:
+        firstname: 'Jack'
+        lastname: 'nicholson'
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+

@@ -1,0 +1,21 @@
+AppBundle\Entity\Author:
+    Author_1:
+        firstname: 'Steven'
+        lastname: 'Spielberg'
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+    Author_2:
+        firstname: 'Woody'
+        lastname: 'Allen'
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+    Author_3:
+        firstname: 'Martin'
+        lastname: 'Scorcese'
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+    Author_4:
+        firstname: 'Steven'
+        lastname: 'Soderbergh'
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'

@@ -1,0 +1,13 @@
+AppBundle\Entity\Article:
+    Article_1:
+        code: '651z6ez1fze65'
+        title: 'Solaris'
+        author: '@Author_4'
+        duration: '255'
+        description: "Répondant à l'appel de détresse lancé par son ami Giberian, le commandant du Prométhée, une station spatiale gravitant autour de la planète Solaris, le docteur Chris Kelvin décide de se rendre à son bord. Une fois sur place, il découvre que Giberian s'est suicidé et que les deux autres scientifiques présentent des signes aigus de stress et de paranoïa."
+        type: '@ArticleType_2'
+        dvd: true
+        blueray: 0
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+        actors: ['@Actor_1', '@Actor_2']
