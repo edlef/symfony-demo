@@ -22,6 +22,6 @@ class ArticlesController extends Controller
 
         dump($articles);
 
-        return $this->render('@App/articles/list.html.twig');
+        return $this->render('@App/articles/list.html.twig', [ 'articles' => $articles ]);
     }
 }

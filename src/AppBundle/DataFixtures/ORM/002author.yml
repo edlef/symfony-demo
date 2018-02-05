@@ -19,3 +19,33 @@ AppBundle\Entity\Author:
         lastname: 'Soderbergh'
         createdAt: '<dateTimeBetween("-200 days", "now")>'
         updatedAt: '<dateTimeBetween($createdAt, "now")>'
+    Author_5:
+        firstname: 'Robert'
+        lastname: 'merle'
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+    Author_6:
+        firstname: 'Maurice'
+        lastname: 'LeBlanc'
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+    Author_7:
+        firstname: 'Agatha'
+        lastname: 'Christie'
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+    Author_8:
+        firstname: 'Michel'
+        lastname: 'Audiard'
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+    Author_9:
+        firstname: 'J.R.R'
+        lastname: 'Tolkien'
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+    Author_10:
+        firstname: 'Edlef'
+        lastname: 'Kowalyk'
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'

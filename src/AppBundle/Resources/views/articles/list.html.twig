@@ -24,44 +24,50 @@
                         <thead>
                         <tr>
                             <th><em class="fa fa-cog"></em></th>
-                            <th class="hidden-xs">ID</th>
-                            <th>Name</th>
-                            <th>Email</th>
+                            <th class="hidden-xs">Title</th>
+                            <th>Release Date</th>
+                            <th>Price</th>
+                            <th>Type</th>
+                            <th>Author</th>
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td align="center">
-                                <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                                <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
-                            </td>
-                            <td class="hidden-xs">1</td>
-                            <td>John Doe</td>
-                            <td>johndoe@example.com</td>
-                        </tr>
+                        {% for article in articles %}
+                            <tr>
+                                <td align="center">
+                                    <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                                    <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                                </td>
+                                <td>{{ article.title }}</td>
+                                <td>{{ article.releaseDate|date }}</td>
+                                <td>{{ article.price }}</td>
+                                <td>{{ article.type.code }}</td>
+                                <td>{{ article.author.firstname ~ ' ' ~ article.author.lastname }}</td>
+                            </tr>
+                        {% endfor %}
                         </tbody>
                     </table>
 
                 </div>
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col col-xs-4">Page 1 of 5
-                        </div>
-                        <div class="col col-xs-8">
-                            <ul class="pagination hidden-xs pull-right">
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">4</a></li>
-                                <li><a href="#">5</a></li>
-                            </ul>
-                            <ul class="pagination visible-xs pull-right">
-                                <li><a href="#">«</a></li>
-                                <li><a href="#">»</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                {#<div class="panel-footer">#}
+                    {#<div class="row">#}
+                        {#<div class="col col-xs-4">Page 1 of 5#}
+                        {#</div>#}
+                        {#<div class="col col-xs-8">#}
+                            {#<ul class="pagination hidden-xs pull-right">#}
+                                {#<li><a href="#">1</a></li>#}
+                                {#<li><a href="#">2</a></li>#}
+                                {#<li><a href="#">3</a></li>#}
+                                {#<li><a href="#">4</a></li>#}
+                                {#<li><a href="#">5</a></li>#}
+                            {#</ul>#}
+                            {#<ul class="pagination visible-xs pull-right">#}
+                                {#<li><a href="#">«</a></li>#}
+                                {#<li><a href="#">»</a></li>#}
+                            {#</ul>#}
+                        {#</div>#}
+                    {#</div>#}
+                {#</div>#}
             </div>
         </div>
     </div>

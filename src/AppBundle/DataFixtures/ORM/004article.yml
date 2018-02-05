@@ -1,6 +1,6 @@
 AppBundle\Entity\Article:
     Article_1:
-        code: '651z6ez1fze65'
+        code: 'DAZ9E8F'
         title: 'Solaris'
         author: '@Author_4'
         duration: '255'
@@ -11,3 +11,104 @@ AppBundle\Entity\Article:
         createdAt: '<dateTimeBetween("-200 days", "now")>'
         updatedAt: '<dateTimeBetween($createdAt, "now")>'
         actors: ['@Actor_1', '@Actor_2']
+        price: '9.99'
+    Article_2:
+        code: '512ZE6F5Z'
+        title: 'Faut pas prendre les enfants du bon dieu pour des canards sauvages'
+        author: '@Author_8'
+        duration: '255'
+        description: "Rita a l'habitude de prendre des gangsers pour amants. Celui qui est actuellement en titre l'a grugée en ne lui donnant pas sa part dans un partage de lingots d'or. Furieuse, Rita decide de se venger. Elle fait appel a sa tante Léontine, une vieille dame qui a inspiré autrefois la terreur dans le monde des truands."
+        type: '@ArticleType_2'
+        dvd: 1
+        blueray: 1
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+        price: '17.95'
+        actors: ['@Actor_1', '@Actor_2']
+    Article_3:
+        code: '512ZE6F5Z'
+        title: 'Comment réussir quand on est con et pleurnichard'
+        author: '@Author_8'
+        duration: '255'
+        description: "Antoine Robineau est démarcheur en boissons. Il réussit toutes ses ventes en pleurnichant sur son sort. Il séduit les dames par le même procédé, ce qui lui vaudra, par le biais d'une richissime nymphomane, de devenir directeur d'un palace."
+        type: '@ArticleType_2'
+        dvd: 0
+        blueray: 1
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+        price: '27.95'
+        actors: ['@Actor_1', '@Actor_2']
+    Article_4:
+        code: '512ZE6F5Z'
+        title: 'Archimède le clochard'
+        author: '@Author_8'
+        duration: '255'
+        description: "Archimède, un clochard atypique se refusant à dormir sous les ponts, décide pour passer l'hiver de se faire enfermer en prison. À cette fin et après plusieurs essais infructueux, il décide de mettre à sac son bistrot favori.Mais malgré tous ses efforts, son temps de prison est bien trop court à son goût.Relâché, il va bien falloir trouver une solution pour passer l'hiver au chaud.Entretemps, son bistrot a changé de propriétaire et le nouveau patron n'est pas aussi docile que l'ancien mais Archimède, bien né et très cultivé, a plus d'un tour dans son sac."
+        type: '@ArticleType_2'
+        dvd: 1
+        blueray: 0
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+        price: '30'
+        actors: ['@Actor_1', '@Actor_2']
+    Article_5:
+        code: '512ZE6F5Z'
+        title: "Le Retour d'Arsène Lupin"
+        author: '@Author_6'
+        duration: '255'
+        description: "La première série met en scène les aventures du célèbre gentleman-cambrioleur dans les années 1930 et la seconde, dans les années 1940."
+        type: '@ArticleType_2'
+        dvd: 1
+        blueray: 1
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+        price: '18.33'
+        actors: ['@Actor_1', '@Actor_2']
+    Article_6:
+        code: '512ZE6F5Z'
+        title: "Le seigneur des anneaux"
+        author: '@Author_9'
+        duration: '255'
+        description: "Le jeune et timide Hobbit, Frodon Sacquet, hérite d'un anneau. Bien loin d'être une simple babiole, il s'agit de l'Anneau Unique, un instrument de pouvoir absolu qui permettrait à Sauron, le Seigneur des ténèbres, de régner sur la Terre du Milieu et de réduire en esclavage ses peuples."
+        type: '@ArticleType_1'
+        dvd: 0
+        blueray: 0
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+        price: '15.85'
+    Article_7:
+        code: '512ZE6F5Z'
+        title: "Malevil"
+        author: '@Author_5'
+        duration: '255'
+        description: "À la suite d'une explosion, probablement nucléaire1, qui a selon toute vraisemblance ravagé la Terre entière le dimanche de Pâques, en 1977, Emmanuel Comte et ses six compagnons (La Menou, Momo, Peyssou, Meyssonnier, Colin et Thomas) font du château de Malevil, dont la profonde cave leur a permis de survivre, la base de départ de leurs efforts de reconstruction de la civilisation, qui passera également par l'affrontement avec d'autres groupes de survivants, que ce soient des bandes errantes ou des groupes structurés nomades ou sédentaires."
+        type: '@ArticleType_1'
+        dvd: 0
+        blueray: 0
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+        price: '12.55'
+    Article_8:
+        code: '512ZE6F5Z'
+        title: "Auprès de moi toujours"
+        author: '@Author_5'
+        duration: '255'
+        description: "Kathy, une jeune femme de 31 ans, se retourne sur son passé. Sa mémoire lui fait revisiter ses années d'apprentissage, passées dans un pensionnat britannique perdu au milieu de la campagne, sans beaucoup de contacts avec l'extérieur. La jeune femme semble ne pas pouvoir dépasser d'anciennes blessures de jeunesse. Au fil du roman, la vérité sur ces enfants coupés du monde durant plusieurs années se révèle…"
+        type: '@ArticleType_1'
+        dvd: 0
+        blueray: 0
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+        price: '17'
+    Article_9:
+        code: '512ZE6F5Z'
+        title: "Dix petits nègres "
+        author: '@Author_7'
+        duration: '255'
+        description: "Dix personnes, qui n'ont aucun point commun entre elles, se retrouvent sur l'île du Nègre sous le prétexte d'invitations ou d'offres d'emplois : le général John Macarthur, Vera Claythorne, Emily Brent, le juge Lawrence Wargrave, Philip Lombard, le docteur Edward Armstrong, William Henry Blore, Anthony Marston, ainsi que le couple Thomas et Ethel Rogers."
+        type: '@ArticleType_1'
+        dvd: 0
+        blueray: 0
+        createdAt: '<dateTimeBetween("-200 days", "now")>'
+        updatedAt: '<dateTimeBetween($createdAt, "now")>'
+        price: '10'
