@@ -1,9 +1,14 @@
 Installation
+========================
 
 1. Clone or download
-2. Run composer 
+
+2. Run composer
+
 	composer install
+
 3. Run installation script
+
 	sh bin/.install.sh
 
 
