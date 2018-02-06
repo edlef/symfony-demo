@@ -1,0 +1,70 @@
+{% extends '@App/layout.html.twig' %}
+
+    {% block content %}
+
+    <div class="row">
+        <div class="col-sm-6 col-md-5 col-md-offset-4">
+            <h2>{{ title }} Article</h2>
+            {{ form_start(form, {attr: {novalidate: 'novalidate'}}) }}
+                <div class="form-group">
+                    <label>Type</label>
+                    {{ form_widget(form.type, {attr: {class: 'form-control'}}) }}
+                    {{ form_errors(form.type) }}
+                </div>
+                <div class="form-group">
+                    <label>Title</label>
+                    {{ form_widget(form.title, {attr: {class: 'form-control'}}) }}
+                    {{ form_errors(form.title) }}
+                </div>
+                <div class="form-group">
+                    <label>Code</label>
+                    {{ form_widget(form.code, {attr: {class: 'form-control'}}) }}
+                    {{ form_errors(form.code) }}
+                </div>
+                <div class="form-group">
+                    <label>Release Date</label>
+                    {{ form_widget(form.releaseDate, {attr: {class: 'form-control'}}) }}
+                    {{ form_errors(form.releaseDate) }}
+                </div>
+                <div class="form-group">
+                    <label>Duration</label>
+                    {{ form_widget(form.duration, {attr: {class: 'form-control'}}) }}
+                    {{ form_errors(form.duration) }}
+                </div>
+                <div class="form-group">
+                    <label>Description (Optional) </label>
+                    {{ form_widget(form.description, {attr: {class: 'form-control'}}) }}
+                    {{ form_errors(form.description) }}
+                </div>
+                <div class="form-group">
+                    <label>Price</label>
+                    {{ form_widget(form.price, {attr: {class: 'form-control'}}) }}
+                    {{ form_errors(form.price) }}
+                </div>
+                <div class="form-group hide-film-inputs">
+                    <label>DVD</label>
+                    {{ form_widget(form.dvd, {attr: {class: 'form-control'}}) }}
+                    {{ form_errors(form.dvd) }}
+                </div>
+                <div class="form-group hide-film-inputs">
+                    <label>blueray</label>
+                    {{ form_widget(form.blueray, {attr: {class: 'form-control'}}) }}
+                    {{ form_errors(form.blueray) }}
+                </div>
+                <div class="form-group">
+                    <label>Author</label>
+                    {{ form_widget(form.author, {attr: {class: 'form-control'}}) }}
+                    {{ form_errors(form.author) }}
+                </div>
+                <div class="form-group hide-film-inputs">
+                    <label>actors</label>
+                    {{ form_widget(form.actors, {attr: {class: 'form-control'}}) }}
+                    {{ form_errors(form.actors) }}
+                </div>
+                {#<button type="submit" class="btn btn-default">Create</button>#}
+                <input type="submit" class="btn" value="{{ title }}" />
+            {{ form_end(form) }}
+        </div>
+    </div>
+
+    {% endblock %}

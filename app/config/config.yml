@@ -72,3 +72,8 @@ fos_rest:
     routing_loader:
         default_format: json
 
+stof_doctrine_extensions:
+    default_locale: en_US
+    orm:
+        default:
+            timestampable: true

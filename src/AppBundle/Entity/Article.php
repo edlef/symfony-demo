@@ -7,6 +7,8 @@ use AppBundle\Entity\Traits\TimestampableTrait;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * @ORM\Table(name="article")
@@ -27,6 +29,7 @@ class Article
     private $id;
 
     /**
+     * @Assert\NotBlank()
      * @var string $code
      *
      * @ORM\Column(name="code", type="string", length=255, nullable=false)
@@ -34,6 +37,7 @@ class Article
     private $code;
 
     /**
+     * @Assert\NotBlank()
      * @var string $title
      *
      * @ORM\Column(name="title", type="string", length=255, nullable=false)
@@ -41,6 +45,7 @@ class Article
     private $title;
 
     /**
+     * @Assert\NotBlank()
      * @var datetime $releaseDate
      *
      * @ORM\Column(name="release_date", type="datetime", nullable=true)
@@ -55,6 +60,7 @@ class Article
     private $length;
 
     /**
+     * @Assert\NotBlank()
      * @var datetime $duration
      *
      * @ORM\Column(name="duration", type="integer", nullable=true)
@@ -69,6 +75,7 @@ class Article
     private $description;
 
     /**
+     * @Assert\NotBlank()
      * @var float $price
      *
      * @ORM\Column(name="price", type="float", nullable=true)
@@ -103,12 +110,13 @@ class Article
     private $author;
 
     /**
-     * @ORM\ManyToMany(targetEntity="Actor")
+     * @ORM\ManyToMany(targetEntity="Actor", cascade={"persist"})
      * @ORM\JoinTable(name="articles_actors")
      */
     private $actors;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->actors = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
@@ -301,16 +309,14 @@ class Article
         return $this->actors;
     }
 
-    /**
-     * @param Actor $actor
-     * @return $this
-     */
     public function addActor(Actor $actor)
     {
-        $this->actors[] = $actor;
+        $this->actors->add($actor);
+    }
 
-        return $this;
-
+    public function removeTag(Actor $actor)
+    {
+        $this->actors->remove($actor);
     }
 
     /**

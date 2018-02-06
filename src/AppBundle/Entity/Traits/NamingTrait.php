@@ -59,4 +59,12 @@ trait NamingTrait
 
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getDisplayName()
+    {
+        return $this->firstname.' '.$this->lastname;
+    }
 }

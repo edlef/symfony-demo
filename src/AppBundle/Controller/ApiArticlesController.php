@@ -8,16 +8,17 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use FOS\RestBundle\Controller\Annotations\Get;
+use AppBundle\Entity\Article;
 
 class ApiArticlesController extends Controller
 {
 
     /**
-     * @Get("/places")
+     * @Get("/articles")
      */
-    public function getArticlesAction(Request $request)
+    public function getArticlesAction()
     {
-        return new JsonResponse('olo');
+        return new JsonResponse('ok', 200);
     }
 
 }

@@ -17,10 +17,10 @@
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li {% if app.request.attributes.get('_route') == 'admin' %}class="active" {% endif %}><a href="{{ path('admin') }}">Home</a></li>
-                    </ul>
                     {% if is_granted('ROLE_ADMIN') %}
+                        <ul class="nav navbar-nav">
+                            <li {% if app.request.attributes.get('_route') == 'articles_list' %}class="active" {% endif %}><a href="{{ path('articles_list') }}">Home</a></li>
+                        </ul>
                         <form class="navbar-form navbar-left">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Search an article">
