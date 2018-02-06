@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Service\ArticlesSerializer;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -15,10 +16,35 @@ class ApiArticlesController extends Controller
 
     /**
      * @Get("/articles")
+     * Get articles list
      */
     public function getArticlesAction()
     {
-        return new JsonResponse('ok', 200);
+        $articles = $this->getDoctrine()
+            ->getRepository(Article::class)
+            ->findAllOrderedByTitle();
+
+        return new JsonResponse($this->get(ArticlesSerializer::class)->serialize($articles), 200);
+    }
+
+
+    /**
+     * @Get("/article/{id}", requirements={"id"="\d+"})
+     * @param $id
+     * @return JsonResponse
+     */
+    public function getArticleAction($id)
+    {
+        $article = $this->getDoctrine()
+            ->getRepository(Article::class)
+            ->findOneById($id);
+
+        if ($article === null) {
+
+            return new JsonResponse([], 404);
+        }
+
+        return new JsonResponse($this->get(ArticlesSerializer::class)->serialize($article), 200);
     }
 
 }
