@@ -11,9 +11,9 @@ Installation
 
 	composer install
 
-3. Run installation script
+3. Run installation script to create database and load fixtures
 
-	sh bin/.install.sh
+	sh bin/install.sh
 
 4. Run server and go to http://localhost:8000/ or setup a VH
 
