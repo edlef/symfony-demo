@@ -8,15 +8,17 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 
 class ArticlesController extends Controller
 {
     /**
      * @Route("/admin/articles", name="articles_list")
+     * @return Response
      */
     public function listAction()
     {
-
+        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Unable to access this page!');
         $articles = $this->getDoctrine()
             ->getRepository(Article::class)
             ->findAllOrderedByTitle();
@@ -31,10 +33,14 @@ class ArticlesController extends Controller
      */
     public function detailAction($id)
     {
-
+        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Unable to access this page!');
         $article = $this->getDoctrine()
             ->getRepository(Article::class)
             ->findOneById($id);
+
+        if ($article === null) {
+            throw $this->createNotFoundException('The article does not exist');
+        }
 
         return $this->render('@App/articles/detail.html.twig', ['article' => $article]);
     }
@@ -46,6 +52,7 @@ class ArticlesController extends Controller
      */
     public function addAction(Request $request)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Unable to access this page!');
         $article = new Article();
         $form = $this->createForm(ArticleType::class, $article);
         $form->handleRequest($request);
@@ -77,6 +84,7 @@ class ArticlesController extends Controller
      */
     public function editAction(Request $request, $id)
     {
+        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Unable to access this page!');
         $article = $this->getDoctrine()
             ->getRepository(Article::class)
             ->findOneById($id);
@@ -118,18 +126,16 @@ class ArticlesController extends Controller
      */
     public function removeAction($id)
     {
-
+        $this->denyAccessUnlessGranted('ROLE_ADMIN', null, 'Unable to access this page!');
         $article = $this->getDoctrine()
             ->getRepository(Article::class)
             ->findOneById($id);
 
         if ($article === null) {
 
-            $this->addFlash(
-                'notice',
-                'Article not found!'
-            );
-            return $this->redirectToRoute('articles_list');
+            if ($article === null) {
+                throw $this->createNotFoundException('The article does not exist');
+            }
 
         }
 

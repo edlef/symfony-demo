@@ -19,14 +19,14 @@ Installation
 
     bin/console server:run
 
-Frontend
--------------
+Authentification
+-----------------
 
- If you need to change javascript or css run
+Use these credentials to log in
 
-    npm run dev
+ username : admin
+ password : admin
 
-Configuration can be found under **webpack.config.js**
 
 *Symfony Standard Edition
 ========================
