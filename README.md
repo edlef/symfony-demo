@@ -22,9 +22,10 @@ Installation
 Authentification
 -----------------
 
-Use these credentials to log in
+**Use these credentials to log in**
 
  username : admin
+
  password : admin
 
 
